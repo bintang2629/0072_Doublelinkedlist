@@ -47,5 +47,26 @@ public:
             START = nodeBaru;
             return;
         }
+    Node *current = START;
+
+        while (current->next != NULL && current->next->noMhs < nim)
+        {
+            current = current->next;
+        }
+
+        if (current->next != NULL && nim == current->next->noMhs)
+        {
+            cout << "Duplicate roll numbers not allowed" << endl;
+            return;
+        }
+
+        nodeBaru->next = current->next;
+        nodeBaru->prev = current;
+
+        if (current->next != NULL)
+            current->next->prev = nodeBaru;
+
+        current->next = nodeBaru;
     }
-};       
+
+}; 
