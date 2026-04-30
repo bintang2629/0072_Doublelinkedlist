@@ -153,5 +153,17 @@ public:
         }
         cout << endl;
     }
+ void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
 
+        int rollNo;
+        cout << "Enter the roll number to search: ";
+        cin >> rollNo;
+
+    }
 };
