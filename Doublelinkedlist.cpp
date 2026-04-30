@@ -177,3 +177,22 @@ public:
     }
 };
 
+int main()
+{
+    DoublyLinkedList list;
+    char choice;
+
+    do
+    {
+        cout << "\nMenu\n";
+        cout << "1. Add Record\n";
+        cout << "2. Delete Record\n";
+        cout << "3. Traverse (Ascending)\n";
+        cout << "4. Traverse (Descending)\n";
+        cout << "5. Search Record\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+    }
+}
