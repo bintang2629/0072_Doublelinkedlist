@@ -47,7 +47,8 @@ public:
             START = nodeBaru;
             return;
         }
-    Node *current = START;
+
+        Node *current = START;
 
         while (current->next != NULL && current->next->noMhs < nim)
         {
@@ -69,7 +70,7 @@ public:
         current->next = nodeBaru;
     }
 
-     void hapus()
+    void hapus()
     {
         if (START == NULL)
         {
@@ -83,7 +84,7 @@ public:
 
         Node *current = START;
 
-     while (current != NULL && current->noMhs != rollNo)
+        while (current != NULL && current->noMhs != rollNo)
             current = current->next;
 
         if (current == NULL)
@@ -110,7 +111,7 @@ public:
         cout << "Record with roll number " << rollNo << " deleted" << endl;
     }
 
- void traverse()
+    void traverse()
     {
         if (START == NULL)
         {
@@ -118,5 +119,39 @@ public:
             return;
         }
 
+        Node *currentNode = START;
+
+        cout << "Records in ascending order of roll number are:\n";
+        while (currentNode != NULL)
+        {
+            cout << currentNode->noMhs << " ";
+            currentNode = currentNode->next;
+        }
+        cout << endl;
     }
+
+    void reverse()
+    {
+        if (START == NULL)
+        {
+            cout << "List is empty" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+
+        while (currentNode->next != NULL)
+        {
+            currentNode = currentNode->next;
+        }
+
+        cout << "Records in descending order of roll number are:\n";
+        while (currentNode != NULL)
+        {
+            cout << currentNode->noMhs << " ";
+            currentNode = currentNode->prev;
+        }
+        cout << endl;
+    }
+
 };
